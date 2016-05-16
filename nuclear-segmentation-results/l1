@@ -1,0 +1,13 @@
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:jar UP-TO-DATE
+:imagemeta:compileJava UP-TO-DATE
+:imagemeta:processResources UP-TO-DATE
+:imagemeta:classes UP-TO-DATE
+:imagemeta:jar UP-TO-DATE
+:masktopoly:compileJava FAILED
+
+BUILD FAILED
+
+Total time: 14.197 secs

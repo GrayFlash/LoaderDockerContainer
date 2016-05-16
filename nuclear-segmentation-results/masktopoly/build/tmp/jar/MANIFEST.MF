@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Implementation-Title: Mask to Polygon Converter v1.2
+Implementation-Version: 1.3
+Main-Class: u24.masktopoly.MaskToPoly
+

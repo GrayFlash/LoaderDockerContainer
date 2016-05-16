@@ -1,0 +1,23 @@
+
+
+
+exports.UPLOADS_DIR =  "/root/";
+
+var bindaas_host = process.annotations_host || "http://dragon.cci.emory.edu:9099/services";
+var bindaas_project = process.annotations_project || "/Camicroscope_Annotations";
+var bindaas_provider = process.annotations_provider || "/MarkupLoader";
+var bindaas_api_key = process.annotations_api_key || "4fbb38a3-1821-436c-a44d-8d3bc5efd33e";
+
+
+
+/* No trailing slashes */
+
+exports.bindaas_host = bindaas_host;
+exports.bindaas_project = bindaas_project;
+exports.bindaas_provider = bindaas_provider;
+exports.bindaas_api_key = bindaas_api_key;
+
+
+exports.MASK_TO_POLY_JAR_PATH = "/root/nuclear-segmentation-results/build/libs/mask-to-polygon-1.3.jar";
+exports.MONGODB_LOADER_PATH = "/root/nuclear-segmentation-results/build/libs/mongodb-loader-1.3.jar"; 
+exports.OPENCV_DIR = "/root/OpenCV/opencv-3.0.0/build/lib";

@@ -1,0 +1,26 @@
+apply plugin: 'java'
+
+def OpenCV = System.getenv("OPENCV_DIR")
+def OpenCVJava = OpenCV + "/bin"
+
+version = '1.3'
+jar {
+    baseName = 'mask-to-polygon'
+    manifest {
+        attributes 'Implementation-Title': 'Mask to Polygon Converter v1.2',
+                   'Implementation-Version': version
+        attributes 'Main-Class': 'u24.masktopoly.MaskToPoly'
+    }
+}
+
+compileJava {
+    options.compilerArgs << '-Xlint:deprecation'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	  compile fileTree(dir : OpenCVJava, include: 'opencv-300.jar')
+}

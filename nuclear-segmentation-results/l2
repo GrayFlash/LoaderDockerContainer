@@ -1,0 +1,273 @@
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/PointData.java:3: error: package org.opencv.core does not exist
+import org.opencv.core.Point;
+                      ^
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/PointData.java:5: error: cannot find symbol
+public class PointData extends Point {
+                               ^
+  symbol: class Point
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:9: error: package org.opencv.core does not exist
+import org.opencv.core.Core;
+                      ^
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:10: error: package org.opencv.core does not exist
+import org.opencv.core.CvType;
+                      ^
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:11: error: package org.opencv.core does not exist
+import org.opencv.core.Mat;
+                      ^
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:12: error: package org.opencv.core does not exist
+import org.opencv.core.MatOfPoint;
+                      ^
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:13: error: package org.opencv.core does not exist
+import org.opencv.core.MatOfPoint2f;
+                      ^
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:14: error: package org.opencv.core does not exist
+import org.opencv.core.Point;
+                      ^
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:15: error: package org.opencv.core does not exist
+import org.opencv.core.Size;
+                      ^
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:16: error: package org.opencv.imgcodecs does not exist
+import org.opencv.imgcodecs.Imgcodecs;
+                           ^
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:17: error: package org.opencv.imgproc does not exist
+import org.opencv.imgproc.Imgproc;
+                         ^
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:20: error: cannot find symbol
+	private Mat inputImg;
+	        ^
+  symbol:   class Mat
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:22: error: cannot find symbol
+	private List<MatOfPoint>  contours;
+	             ^
+  symbol:   class MatOfPoint
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/PolygonData.java:3: error: package org.opencv.core does not exist
+import org.opencv.core.Point;
+                      ^
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/PolygonData.java:6: error: cannot find symbol
+	public Point[] points;
+	       ^
+  symbol:   class Point
+  location: class PolygonData
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:26: error: cannot find symbol
+	static{ System.loadLibrary(Core.NATIVE_LIBRARY_NAME); }
+	                           ^
+  symbol:   variable Core
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:48: error: cannot find symbol
+		inputImg = Imgcodecs.imread(inpFile, CvType.CV_8UC1);
+		                                     ^
+  symbol:   variable CvType
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:48: error: cannot find symbol
+		inputImg = Imgcodecs.imread(inpFile, CvType.CV_8UC1);
+		           ^
+  symbol:   variable Imgcodecs
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:53: error: illegal start of type
+		return (int) (inputImg.size().width);
+		             ^
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:57: error: illegal start of type
+		return (int) (inputImg.size().height);
+		             ^
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:65: error: cannot find symbol
+		Mat temp = Mat.zeros(new Size(width+2,height+2), inputImg.type());
+		^
+  symbol:   class Mat
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:65: error: cannot find symbol
+		Mat temp = Mat.zeros(new Size(width+2,height+2), inputImg.type());
+		                         ^
+  symbol:   class Size
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:65: error: cannot find symbol
+		Mat temp = Mat.zeros(new Size(width+2,height+2), inputImg.type());
+		           ^
+  symbol:   variable Mat
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:66: error: cannot find symbol
+		Core.copyMakeBorder(inputImg, temp, 1, 1, 1, 1, Core.BORDER_CONSTANT);
+		                                                ^
+  symbol:   variable Core
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:66: error: cannot find symbol
+		Core.copyMakeBorder(inputImg, temp, 1, 1, 1, 1, Core.BORDER_CONSTANT);
+		^
+  symbol:   variable Core
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:68: error: cannot find symbol
+		contours = new ArrayList<MatOfPoint>();
+		                         ^
+  symbol:   class MatOfPoint
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:69: error: cannot find symbol
+		Imgproc.findContours(temp, contours, new Mat(), Imgproc.RETR_CCOMP, Imgproc.CHAIN_APPROX_SIMPLE);
+		                                         ^
+  symbol:   class Mat
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:69: error: cannot find symbol
+		Imgproc.findContours(temp, contours, new Mat(), Imgproc.RETR_CCOMP, Imgproc.CHAIN_APPROX_SIMPLE);
+		                                                ^
+  symbol:   variable Imgproc
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:69: error: cannot find symbol
+		Imgproc.findContours(temp, contours, new Mat(), Imgproc.RETR_CCOMP, Imgproc.CHAIN_APPROX_SIMPLE);
+		                                                                    ^
+  symbol:   variable Imgproc
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:69: error: cannot find symbol
+		Imgproc.findContours(temp, contours, new Mat(), Imgproc.RETR_CCOMP, Imgproc.CHAIN_APPROX_SIMPLE);
+		^
+  symbol:   variable Imgproc
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:73: error: cannot find symbol
+			Point[] poly_points = contours.get(i).toArray();
+			^
+  symbol:   class Point
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:86: error: cannot find symbol
+				Mat contour = new Mat(1,poly_points.length, CvType.CV_32FC2);
+				^
+  symbol:   class Mat
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:86: error: cannot find symbol
+				Mat contour = new Mat(1,poly_points.length, CvType.CV_32FC2);
+				                  ^
+  symbol:   class Mat
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:86: error: cannot find symbol
+				Mat contour = new Mat(1,poly_points.length, CvType.CV_32FC2);
+				                                            ^
+  symbol:   variable CvType
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:89: error: cannot find symbol
+				double poly_area = Imgproc.contourArea(contour);
+				                   ^
+  symbol:   variable Imgproc
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:110: error: cannot find symbol
+		Mat temp = Mat.zeros(new Size(width+2,height+2), inputImg.type());
+		^
+  symbol:   class Mat
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:110: error: cannot find symbol
+		Mat temp = Mat.zeros(new Size(width+2,height+2), inputImg.type());
+		                         ^
+  symbol:   class Size
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:110: error: cannot find symbol
+		Mat temp = Mat.zeros(new Size(width+2,height+2), inputImg.type());
+		           ^
+  symbol:   variable Mat
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:111: error: cannot find symbol
+		Core.copyMakeBorder(inputImg, temp, 1, 1, 1, 1, Core.BORDER_CONSTANT);
+		                                                ^
+  symbol:   variable Core
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:111: error: cannot find symbol
+		Core.copyMakeBorder(inputImg, temp, 1, 1, 1, 1, Core.BORDER_CONSTANT);
+		^
+  symbol:   variable Core
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:113: error: cannot find symbol
+		contours = new ArrayList<MatOfPoint>();
+		                         ^
+  symbol:   class MatOfPoint
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:114: error: cannot find symbol
+		Imgproc.findContours(temp, contours, new Mat(), Imgproc.RETR_CCOMP, Imgproc.CHAIN_APPROX_SIMPLE);
+		                                         ^
+  symbol:   class Mat
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:114: error: cannot find symbol
+		Imgproc.findContours(temp, contours, new Mat(), Imgproc.RETR_CCOMP, Imgproc.CHAIN_APPROX_SIMPLE);
+		                                                ^
+  symbol:   variable Imgproc
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:114: error: cannot find symbol
+		Imgproc.findContours(temp, contours, new Mat(), Imgproc.RETR_CCOMP, Imgproc.CHAIN_APPROX_SIMPLE);
+		                                                                    ^
+  symbol:   variable Imgproc
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:114: error: cannot find symbol
+		Imgproc.findContours(temp, contours, new Mat(), Imgproc.RETR_CCOMP, Imgproc.CHAIN_APPROX_SIMPLE);
+		^
+  symbol:   variable Imgproc
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:119: error: cannot find symbol
+			MatOfPoint2f approxCurve = new MatOfPoint2f();
+			^
+  symbol:   class MatOfPoint2f
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:119: error: cannot find symbol
+			MatOfPoint2f approxCurve = new MatOfPoint2f();
+			                               ^
+  symbol:   class MatOfPoint2f
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:120: error: cannot find symbol
+			MatOfPoint2f inpCurve = new MatOfPoint2f(contours.get(i).toArray());
+			^
+  symbol:   class MatOfPoint2f
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:120: error: cannot find symbol
+			MatOfPoint2f inpCurve = new MatOfPoint2f(contours.get(i).toArray());
+			                            ^
+  symbol:   class MatOfPoint2f
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:121: error: cannot find symbol
+		   	Imgproc.approxPolyDP(inpCurve, approxCurve, 2, true);
+		   	^
+  symbol:   variable Imgproc
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:122: error: cannot find symbol
+			MatOfPoint outCurve = new MatOfPoint(approxCurve.toArray());
+			^
+  symbol:   class MatOfPoint
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:122: error: cannot find symbol
+			MatOfPoint outCurve = new MatOfPoint(approxCurve.toArray());
+			                          ^
+  symbol:   class MatOfPoint
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:125: error: cannot find symbol
+				Point[] poly_points = outCurve.toArray();
+				^
+  symbol:   class Point
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:138: error: cannot find symbol
+				Mat contour = new Mat(1,poly_points.length, CvType.CV_32FC2);
+				^
+  symbol:   class Mat
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:138: error: cannot find symbol
+				Mat contour = new Mat(1,poly_points.length, CvType.CV_32FC2);
+				                  ^
+  symbol:   class Mat
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:138: error: cannot find symbol
+				Mat contour = new Mat(1,poly_points.length, CvType.CV_32FC2);
+				                                            ^
+  symbol:   variable CvType
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:141: error: cannot find symbol
+				double poly_area = Imgproc.contourArea(contour);
+				                   ^
+  symbol:   variable Imgproc
+  location: class MaskToPoly
+/home/ganesh/dev/nuclear-segmentation-results/masktopoly/src/main/java/u24/masktopoly/MaskToPoly.java:160: error: cannot find symbol
+			Point[] points;
+			^
+  symbol:   class Point
+  location: class MaskToPoly
+58 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':masktopoly:compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.

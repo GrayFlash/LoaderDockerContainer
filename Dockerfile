@@ -76,8 +76,9 @@ RUN sh opencv3_0_0_java.sh
 # Install nuclear segmentation results program
 RUN apt-get -y install gradle
 WORKDIR /root
-COPY nuclear-segmentation-results /root/nuclear-segmentation-results
+COPY nuclear-segmentation-results2 /root/nuclear-segmentation-results
 ENV OPENCV_DIR /root/OpenCV/opencv-3.0.0/build
+ENV OPENCV_JAVA_LIB /root/OpenCV/opencv-3.0.0/build/bin/opencv-300.jar
 WORKDIR /root/nuclear-segmentation-results
 RUN gradle build
 

@@ -99,6 +99,11 @@ COPY config.js.dataloader /root/dataloader/config.js
 
 WORKDIR /root
 
+RUN apt-get -q update
+RUN apt-get -q -y upgrade
+#DNS update: This is needed to run yum and to let the docker build process access the internet. 
+RUN "sh" "-c" "echo nameserver 8.8.8.8 >> /etc/resolv.conf"
+
 RUN apt-get -y install redis-server
 
 COPY run.sh /root/

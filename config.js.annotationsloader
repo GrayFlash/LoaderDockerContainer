@@ -3,12 +3,13 @@
 
 exports.UPLOADS_DIR =  "/root/";
 
-var bindaas_host = process.annotations_host || "http://dragon.cci.emory.edu:9099/services";
-var bindaas_project = process.annotations_project || "/Camicroscope_Annotations";
-var bindaas_provider = process.annotations_provider || "/MarkupLoader";
-var bindaas_api_key = process.annotations_api_key || "4fbb38a3-1821-436c-a44d-8d3bc5efd33e";
+var bindaas_host = process.env.annotations_host || "http://dragon.cci.emory.edu:9099";
+var bindaas_project = process.env.annotations_project || "/Camicroscope_Annotations";
+var bindaas_provider = process.env.annotations_provider || "/MarkupLoader";
+var bindaas_api_key = process.env.annotations_api_key || "4fbb38a3-1821-436c-a44d-8d3bc5efd33e";
 
 
+bindaas_host = bindaas_host + "/services" ;
 
 /* No trailing slashes */
 

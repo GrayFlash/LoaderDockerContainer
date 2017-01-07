@@ -43,6 +43,7 @@ RUN mkdir -p /root/dataloader
 WORKDIR /root/dataloader
 EXPOSE 3001
 RUN git clone --recursive https://lastlegion@bitbucket.org/containerized_camic/dataloader_service.git .
+RUN git submodule update --recursive --remote
 # Install requirements for data loader
 #COPY DataLoader_Api/package.json /root/dataloader/
 RUN npm install

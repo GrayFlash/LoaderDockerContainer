@@ -1,0 +1,13 @@
+sudo: required
+
+language: ruby
+
+services:
+  - docker
+
+before_install:
+- docker build -t camicroscope_loader . 
+- docker run -itd -p 3000:3000 -p 3001:3001 -p 3002:3002 -v /data/images:/data/images -e "dataloader_host=http://localhost" -e "annotations_host=http://localhost" camicroscope_loader
+script:
+- docker ps | grep -q loader
+

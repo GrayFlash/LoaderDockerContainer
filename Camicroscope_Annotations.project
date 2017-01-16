@@ -4,8 +4,8 @@
       "dataSource": {
         "host": "127.0.0.1",
         "port": "27017",
-        "db": "Camicroscope_MarkupLoader",
-        "collection": "Markups",
+        "db": "Camicroscope",
+        "collection": "objects",
         "initialize": true
       },
       "queryEndpoints": {
@@ -197,8 +197,8 @@
       "dataSource": {
         "host": "127.0.0.1",
         "port": "27017",
-        "db": "Camicroscope_MarkupLoader",
-        "collection": "MarkupsForImages",
+        "db": "Camicroscope",
+        "collection": "metadata",
         "initialize": true
       },
       "queryEndpoints": {

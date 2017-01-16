@@ -4,8 +4,8 @@
       "dataSource": {
         "host": "127.0.0.1",
         "port": "27017",
-        "db": "Camicroscope_DataLoader",
-        "collection": "DataLoader",
+        "db": "Camicroscope",
+        "collection": "images",
         "initialize": true
       },
       "queryEndpoints": {
@@ -24,7 +24,7 @@
           "description": "Gets all the data"
         },
         "getImagesForSubjectId": {
-          "queryTemplate": "{\n\t\"_operation\" : \"find\" ,\n\t\"_operation_args\" : {\n\t\t\t\t\t\t\t\"query\" : { \u0027sample-id\u0027 : \u0027$Subject_ID$\u0027 } ,\n\t\t\t\t\t\t\t\"fields\" :{ \u0027_id\u0027 : 0, \"file-location\": 1}\n\t\t\t\t\t\t}\n}\n  ",
+          "queryTemplate": "{\n\t\"_operation\" : \"find\" ,\n\t\"_operation_args\" : {\n\t\t\t\t\t\t\t\"query\" : { \u0027case_id\u0027 : \u0027$Subject_ID$\u0027 } ,\n\t\t\t\t\t\t\t\"fields\" :{ \u0027_id\u0027 : 0, \"file-location\": 1}\n\t\t\t\t\t\t}\n}\n  ",
           "metaData": {},
           "tags": [],
           "bindVariables": {
@@ -66,7 +66,7 @@
           "description": "Fetches MD5 for image give the filelocation  "
         },
         "getFileLocationByIID": {
-          "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: \n    {\n        \u0027query\u0027:{\"sample-id\": \"$TCGAId$\"},\n        \u0027fields\u0027: {\u0027_id\u0027:0, \u0027file-location\u0027: 1 }\n    }\n}      ",
+          "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: \n    {\n        \u0027query\u0027:{\"case_id\": \"$TCGAId$\"},\n        \u0027fields\u0027: {\u0027_id\u0027:0, \u0027file-location\u0027: 1 }\n    }\n}      ",
           "metaData": {},
           "tags": [],
           "bindVariables": {
@@ -87,7 +87,7 @@
           "description": "Retrieves file location for given sample ID   "
         },
         "getMPPByIID": {
-          "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: \n    {\n        \u0027query\u0027:{\"sample-id\": \"$TCGAId$\"},\n        \u0027fields\u0027: {\u0027_id\u0027:0, \u0027mpp-x\u0027: 1, \u0027mpp-y\u0027: 1 }\n    }\n}         ",
+          "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: \n    {\n        \u0027query\u0027:{\"case_id\": \"$TCGAId$\"},\n        \u0027fields\u0027: {\u0027_id\u0027:0, \u0027mpp-x\u0027: 1, \u0027mpp-y\u0027: 1 }\n    }\n}         ",
           "metaData": {},
           "tags": [],
           "bindVariables": {
@@ -108,12 +108,12 @@
           "description": "Gets MPP for give IID    "
         },
         "getMetaDataForCaseID": {
-          "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: \n    {\n        \u0027query\u0027:{\"sample-id\": \"$TCGAId$\"},\n        \u0027fields\u0027: {\u0027_id\u0027:0,  }\n    }\n}       ",
+          "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: \n    {\n        \u0027query\u0027:{\"case_id\": \"$case_id$\"},\n        \u0027fields\u0027: {\u0027_id\u0027:0  }\n    }\n}         ",
           "metaData": {},
           "tags": [],
           "bindVariables": {
-            "TCGAId": {
-              "name": "TCGAId",
+            "case_id": {
+              "name": "case_id",
               "required": true,
               "defaultValue": "",
               "description": ""
@@ -124,12 +124,23 @@
             "outputFormat": "JSON"
           },
           "name": "getMetaDataForCaseID",
-          "timeCreated": "Thu May 12 12:16:45 EDT 2016",
+          "timeCreated": "Thu Jun 09 15:12:59 EDT 2016",
           "createdBy": "admin",
-          "description": "Retrieves file location for given case ID"
+          "description": "Retrieves file location for given case ID  "
         }
       },
-      "deleteEndpoints": {},
+      "deleteEndpoints": {
+        "DeleteAll": {
+          "queryTemplate": "{\n\t\"_operation\" : \"delete\" ,\n\t\"_operation_args\" : {\n\t\t\t\t\t\t\t\"query\" : {  }\n\t\t\t\t\t\t}\n}\n",
+          "tags": [],
+          "bindVariables": {},
+          "stage": "UNVERIFIED",
+          "name": "DeleteAll",
+          "timeCreated": "Thu Jun 09 15:09:59 EDT 2016",
+          "createdBy": "admin",
+          "description": "Delete all data"
+        }
+      },
       "submitEndpoints": {
         "csvFile": {
           "type": "MULTIPART",

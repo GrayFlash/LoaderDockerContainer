@@ -1,3 +1,4 @@
+# Loader Container [![Build Status](https://travis-ci.org/camicroscope/LoaderDockerContainer.svg?branch=master)](https://travis-ci.org/camicroscope/LoaderDockerContainer)
 
 ## Dataloader API
 Following examples assume `<API_PORT>==32799`

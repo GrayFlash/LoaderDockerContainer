@@ -91,6 +91,7 @@ WORKDIR /root
 RUN git clone https://lastlegion@bitbucket.org/containerized_camic/annotationloader.git
 
 RUN apt-get -y install nodejs npm
+
 WORKDIR /root/annotationloader
 
 RUN npm install 
@@ -107,6 +108,10 @@ RUN apt-get -q -y upgrade
 RUN "sh" "-c" "echo nameserver 8.8.8.8 >> /etc/resolv.conf"
 
 RUN apt-get -y install redis-server
+
+# Install forever
+RUN  ln -s "$(which nodejs)" /usr/bin/node
+RUN npm install -g forever
 
 COPY run.sh /root/
 CMD ["sh", "run.sh"]

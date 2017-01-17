@@ -88,7 +88,7 @@ RUN execstack -c /root/OpenCV/opencv-3.0.0/build/lib/libopencv_java300.so
 
 
 WORKDIR /root
-RUN git clone https://github.com/camicroscope/uAIMDataLoader.git
+RUN git clone https://github.com/camicroscope/uAIMDataLoader.git annotationloader
 
 RUN apt-get -y install nodejs npm
 

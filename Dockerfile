@@ -116,6 +116,7 @@ RUN npm install -g forever
 COPY run.sh /root/
 
 # Install new zip loader
+RUN apt-get -y -q install curl
 RUN curl -O -J -L https://services.gradle.org/distributions/gradle-2.13-bin.zip && \
     unzip gradle-2.13-bin.zip && \
     mv gradle-2.13 /usr/local && \

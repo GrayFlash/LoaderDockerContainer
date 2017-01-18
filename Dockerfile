@@ -114,4 +114,27 @@ RUN  ln -s "$(which nodejs)" /usr/bin/node
 RUN npm install -g forever
 
 COPY run.sh /root/
+
+# Install new zip loader
+RUN curl -O -J -L https://services.gradle.org/distributions/gradle-2.13-bin.zip && \
+    unzip gradle-2.13-bin.zip && \
+    mv gradle-2.13 /usr/local && \
+    rm -rf gradle-2.13* 
+ENV GRADLE_HOME=/usr/local/gradle-2.13
+ENV PATH=$GRADLE_HOME/bin:$PATH
+ENV OPENCV_JAVA_DIR /root/OpenCV/opencv-3.0.0/build
+ENV FEATUREDB_DIR=/usr/local/pathomics_featuredb
+
+
+WORKDIR /tmp/
+RUN git clone -b handle-quip-output https://github.com/SBU-BMI/pathomics_featuredb && \
+	cd pathomics_featuredb/src && \
+	gradle build && \
+	gradle installDist && \
+	cd /tmp && mv pathomics_featuredb /usr/local/. && \
+	cp $FEATUREDB_DIR/docker_scripts/run* /usr/local/bin/. && \
+	cp $FEATUREDB_DIR/script/run* /usr/local/bin/. && \
+	cd /tmp
+
+
 CMD ["sh", "run.sh"]

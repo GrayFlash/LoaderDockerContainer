@@ -20,7 +20,9 @@ export mongo_host=127.0.0.1 #IP address of data container
 export mongo_port=27017
 ```
 
-`docker run -itd -p $CAMIC_KUE_PORT:3000 -p $CAMIC_MARKUPLOADER_PORT:3001 -p $CAMIC_DATALOADER_PORT:3002 -v $CAMIC_IMAGES_DIR:/data/images -e "dataloader_host=$(echo $dataloader_host)" -e "annotations_host=$(echo $annotations_host)" -e "mongo_host=$(echo $mongo_host)" -e "mongo_port=$(echo $mongo_port)"  camicroscope_loader`
+```
+docker run -itd -p $CAMIC_KUE_PORT:3000 -p $CAMIC_MARKUPLOADER_PORT:3001 -p $CAMIC_DATALOADER_PORT:3002 -v $CAMIC_IMAGES_DIR:/data/images -e "dataloader_host=$(echo $dataloader_host)" -e "annotations_host=$(echo $annotations_host)" -e "mongo_host=$(echo $mongo_host)" -e "mongo_port=$(echo $mongo_port)"  camicroscope_loader
+```
 
 
 

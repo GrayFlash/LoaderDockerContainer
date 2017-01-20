@@ -10,6 +10,9 @@ Contains imageLoader and uAIMDataLoader for loading images and markups into caMi
 
 ```
 
+mkdir img
+export CAMIC_IMAGES_DIR=$(echo $(pwd)/img)
+
 export CAMIC_KUE_PORT=6000
 export CAMIC_MARKUPLOADER_PORT=6001
 export CAMIC_DATALOADER_PORT=6002

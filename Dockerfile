@@ -113,7 +113,6 @@ RUN apt-get -y install redis-server
 RUN  ln -s "$(which nodejs)" /usr/bin/node
 RUN npm install -g forever
 
-COPY run.sh /root/
 
 # Install new zip loader
 RUN apt-get -y -q install curl
@@ -136,6 +135,9 @@ RUN git clone -b handle-quip-output https://github.com/SBU-BMI/pathomics_feature
 	cp $FEATUREDB_DIR/docker_scripts/run* /usr/local/bin/. && \
 	cp $FEATUREDB_DIR/script/run* /usr/local/bin/. && \
 	cd /tmp
+
+WORKDIR /root
+COPY run.sh /root/
 
 
 CMD ["sh", "run.sh"]

@@ -137,5 +137,5 @@ RUN git clone -b handle-quip-output https://github.com/SBU-BMI/pathomics_feature
 	cp $FEATUREDB_DIR/script/run* /usr/local/bin/. && \
 	cd /tmp
 
-
+COPY redis.conf /etc/redis/redis.conf
 CMD ["sh", "run.sh"]

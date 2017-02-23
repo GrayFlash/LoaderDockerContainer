@@ -127,7 +127,7 @@ ENV FEATUREDB_DIR=/usr/local/pathomics_featuredb
 
 
 WORKDIR /tmp/
-RUN git clone -b handle-quip-output https://github.com/SBU-BMI/pathomics_featuredb && \
+RUN git clone https://github.com/SBU-BMI/pathomics_featuredb && \
 	cd pathomics_featuredb/src && \
 	gradle build && \
 	gradle installDist && \

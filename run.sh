@@ -2,6 +2,11 @@
 execstack -c /root/OpenCV/opencv-3.0.0/build/lib/libopencv_java300.so &
 service redis-server start
 
+
+#Get API key from bindaas
+#alias api_k="eval $(python createUser.py loasdderi1@qui1zsadfdiasd)";
+eval $(python createUser.py loader@quip)
+
 # Run Image Loader
 forever start /root/dataloader/bin/www
 

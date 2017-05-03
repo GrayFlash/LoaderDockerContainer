@@ -5,7 +5,10 @@ service redis-server start
 
 #Get API key from bindaas
 #alias api_k="eval $(python createUser.py loasdderi1@qui1zsadfdiasd)";
-eval $(python createUser.py loader@quip)
+apikey=$(python createUser.py loader@quip)
+
+sed -i -e "s/APIKEY/$apikey/g" dataloader/config.js
+sed -i -e "s/APIKEY/$apikey/g" annotationloader/config.js
 
 # Run Image Loader
 forever start /root/dataloader/bin/www

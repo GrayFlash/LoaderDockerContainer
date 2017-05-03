@@ -23,4 +23,6 @@ key =(key[3:len(key)-3])
 #print os.environ['api_key']
 
 #Hacky way of setting a persistent environment variable using python
-print("export api_key=%s" % (pipes.quote(str(key))))
+#print("export api_key=%s" % (pipes.quote(str(key))))
+
+print(key)

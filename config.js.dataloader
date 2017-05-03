@@ -3,7 +3,7 @@
 
 var dataLoader_py = process.env.dataLoader_py || "/root/dataloader/DataLoader/dataLoader/dataloader.py";
 
-var api_key = process.env.dataloader_api_key || "4fbb38a3-1821-436c-a44d-8d3bc5efd33e";
+var api_key = process.env.api_key || "4fbb38a3-1821-436c-a44d-8d3bc5efd33e";
 
 var bindaas_host = process.env.dataloader_host || "http://dragon.cci.emory.edu:9099";
 

@@ -38,22 +38,6 @@ RUN apt-get install -y python3-setuptools python3-pip
 # Node
 RUN apt-get install -y nodejs npm
 
-# Data Loader API
-RUN mkdir -p /root/dataloader
-WORKDIR /root/dataloader
-EXPOSE 3001
-RUN git clone --recursive https://github.com/camicroscope/ImageLoader.git .
-RUN git submodule update --recursive --remote
-# Install requirements for data loader
-#COPY DataLoader_Api/package.json /root/dataloader/
-RUN npm install
-
-#COPY DataLoader_Api /root/dataloader
-
-RUN ["pip3","install", "-r",  "/root/dataloader/DataLoader/requirements.txt"]
-EXPOSE 3000
-
-
 
 ###################
 # Annotations Loader

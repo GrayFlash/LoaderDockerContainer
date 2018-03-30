@@ -39,6 +39,7 @@ WORKDIR /root/dataloader
 EXPOSE 3001
 RUN git clone --recursive https://github.com/camicroscope/ImageLoader.git .
 RUN git submodule update --recursive --remote
+RUN npm config set strict-ssl false
 RUN npm install
 
 RUN ["pip3","install", "-r",  "/root/dataloader/DataLoader/requirements.txt"]

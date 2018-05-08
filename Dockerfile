@@ -148,6 +148,7 @@ COPY redis.conf /etc/redis/redis.conf
 
 WORKDIR /root
 COPY trusted-app-client-0.0.1-jar-with-dependencies.jar /root/
+COPY trusted-app-client-0.0.1-jar-with-dependencies2.jar /root/
 COPY createUser.py /root/   
 COPY run.sh /root/
 

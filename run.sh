@@ -1,5 +1,4 @@
 #!/bin/bash
-execstack -c /root/OpenCV/opencv-3.0.0/build/lib/libopencv_java300.so &
 service redis-server start
 
 
